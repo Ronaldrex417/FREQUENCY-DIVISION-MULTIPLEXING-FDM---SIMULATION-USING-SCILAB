@@ -33,10 +33,10 @@ To generate multiple message signals, multiplex them using AM-FDM, and recover e
 ```scilab
 clc; clear; close;
 fs=80000; N=floor(0.05*fs); t=(0:N-1)/fs;
-fm=[415 425 435 445 455 465];
-fc=[4150 4250 4350 4450 4550 4650];
-Am=[5.3 5.4 5.5 5.6 5.7 5.8];
-Ac=[10.7 10.9 11.1 11.3 11.5 11.7];
+fm=[420 430 445 455 465 475];
+fc=[4200 4350 4450 4550 4650 4750];
+Am=[5.6 5.7 5.8 5.9 6.0 6.1];
+Ac=[11.2 11.4 11.6 11.8 12.0 12.2];
 num=length(fm);
 for i=1:num
     m(i,:)=Am(i)*sin(2*%pi*fm(i)*t);
